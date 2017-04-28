@@ -1,4 +1,4 @@
-package tao.contierspringmvc.controller;
+package com.cdk.obi.controller;
 
 import java.io.IOException;
 
