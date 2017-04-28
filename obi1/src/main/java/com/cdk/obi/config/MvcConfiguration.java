@@ -10,10 +10,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
-@ComponentScan(basePackages="com.cdk.obi")
+@ComponentScan(basePackages="com.cdk.obi.controller,com.cdk.obi.service")
 @EnableWebMvc
 public class MvcConfiguration extends WebMvcConfigurerAdapter{
 
+	MvcConfiguration(){
+		System.out.println("MvcConfiguration Created");
+	}
 	//@Bean
 	public ViewResolver getViewResolver(){
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();

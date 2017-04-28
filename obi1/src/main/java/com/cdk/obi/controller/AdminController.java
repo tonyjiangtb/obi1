@@ -17,6 +17,9 @@ import com.cdk.obi.model.User;
 @RestController
 public class AdminController {
 
+	AdminController(){
+		System.out.println("AdminController Created");
+	}
 	@RequestMapping(value="/admin",method=RequestMethod.GET,produces=MediaType.APPLICATION_JSON_VALUE)
 	public User test2(@RequestParam(defaultValue="lala") String id){
 		User u1=new User();
