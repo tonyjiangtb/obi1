@@ -11,8 +11,8 @@ public class ZataConfig {
 	ZataConfig(){
 		System.out.println("zataConfig Created");
 	}
-	@Bean
-	Service1 GetService(){
+	@Bean//用方法名指定bean id
+	Service1 service2(){
 		return new Service1();
 	}
 }
