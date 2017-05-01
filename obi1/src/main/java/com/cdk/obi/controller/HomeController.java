@@ -35,6 +35,7 @@ public class HomeController {
 	@RequestMapping(value="/")
 	public String test() throws IOException{
 		service1.hello();
+		//sql.openSession().
 		return "home";
 	}
 }
