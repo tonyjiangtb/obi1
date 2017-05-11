@@ -5,6 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class User {
 	public String UserID;
+	public String  desc;
 	public String  mode;
 	public String  pass;
 	public String  accessurl;
