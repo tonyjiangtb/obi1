@@ -3,8 +3,12 @@ package com.cdk.obi.config;
 import javax.sql.DataSource;
 //import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+
+import com.cdk.obi.dao.DataMapper;
+
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -44,6 +48,13 @@ public class DataConfig {
 		sessionFactory.setDataSource(getDataSource());
 		return sessionFactory.getObject();
 	}
+	@Bean
+	public DataMapper userMapper() throws Exception {
+	@SuppressWarnings("resource")
+	final SqlSessionTemplate sessionTemplate = new SqlSessionTemplate(sqlSessionFactory());
+	return sessionTemplate.getMapper(DataMapper.class);
+	}
+	
 	// @Bean
 	// public UserMapper userMapper() throws Exception {
 	// final SqlSessionTemplate sessionTemplate = new

@@ -1,5 +1,9 @@
 package com.cdk.obi.dao;
 
-public interface DataMapper {
+import java.util.List;
 
+import com.cdk.obi.model.DBUser;
+
+public interface DataMapper {
+    List<DBUser> getAll();
 } 
