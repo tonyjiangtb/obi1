@@ -14,8 +14,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
-@Configuration
-@MapperScan("com.cdk.obi.mapper")
+//@Configuration
+//@MapperScan("com.cdk.obi.mapper")
 public class DataConfig {
 	DataConfig() {
 		System.out.println("DataConfig Created");
@@ -31,9 +31,9 @@ public class DataConfig {
 		// return dataSource;
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		 dataSource.setDriverClassName("org.postgresql.Driver");
-		 dataSource.setUrl("jdbc:postgresql://localhost:3306/concretepage");
-		 dataSource.setUsername("root");
-		 dataSource.setPassword("");
+		 dataSource.setUrl("jdbc:postgresql://172.31.86.12:5432/test");
+		 dataSource.setUsername("postgres");
+		 dataSource.setPassword("1234");
 		 return dataSource;
 	}
 
