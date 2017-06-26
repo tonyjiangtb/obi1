@@ -29,10 +29,16 @@ public class DataConfig {
 		// dataSource.setUsername("root");
 		// dataSource.setPassword("");
 		// return dataSource;
-		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		 dataSource.setDriverClassName("org.postgresql.Driver");
-		 dataSource.setUrl("jdbc:postgresql://172.31.86.12:5432/test");
-		 dataSource.setUsername("postgres");
+//		DriverManagerDataSource dataSource = new DriverManagerDataSource();
+//		 dataSource.setDriverClassName("org.postgresql.Driver");
+//		 dataSource.setUrl("jdbc:postgresql://172.31.86.12:5432/test");
+//		 dataSource.setUsername("postgres");
+//		 dataSource.setPassword("1234");
+		 
+		 DriverManagerDataSource dataSource = new DriverManagerDataSource();
+		 dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+		 dataSource.setUrl("jdbc:oracle:thin:@127.0.0.1:1521:jt");
+		 dataSource.setUsername("jt");
 		 dataSource.setPassword("1234");
 		 return dataSource;
 	}
